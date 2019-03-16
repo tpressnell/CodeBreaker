@@ -23,10 +23,13 @@ Here is my header file for this program:
   int randint(int);
   int randint(int, int);
 ```
+## Constants
 
 The CODE_SPAN constant is what range of numbers can the program choose from. For instance, it may only choose from 1-5 instead of 1-9. 
 The CODE_LENGTH constant is how long the secret code will be. An easy code may only have a length of 4, while a hard code may have a length of 7. 
 The MAX_GUESSES constant is the boundry that, when reached, ends the game and informs the player that they have lost and what the secret code is. 
+
+## Program Functions
 
 Here is the core logic for the get_player_code() function.
 
