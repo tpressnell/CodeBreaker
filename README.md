@@ -186,6 +186,10 @@ Here is the code that performs the bulk of the logic for the game:
 
 In the first part of this while loop, the correct and misplaced digit counters are reset, and a new copy of the player's code and the secret code is retrieved to be compared. The program then checks for correct digits witha for loop, and uses the for loop counter to index the strings to see if they are equal. If they are, the player's digit that is correct is changed to an "X" and the secret code's digit to a "Y". This is done so that the digits will not be counted more than once and make the correct and misplaced counters read incorrectly. The next check that is performed is for misplaced digits. It implements a nested for loop to check each value of the player's code with every value of the secret code. If any of these match, the player code's and secret code's digit is changed to "X" and "Y" respectively. This continues until the user reaches the max number of guesses or guesses the code correctly. If the user does not guess the code correctly, the program tells the user what the code was and then prompts them to start a new game. If the user guesses the code correctly, the program tells the user this and the number of guesses it took them to guess the code. The user is also prompted to start a new game at this point. If the user chooses to start a new game, then the entire process starts over. If they choose not to, the program print a farewell message and then closes. 
 
+## Using CodeBreaker
+
+To run this program, all that the user will need is the compiled .exe file. After clicking on this file, a terminal window will appear and the user will be instructed through the program as explained above.
+
 
 
 
