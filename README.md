@@ -80,7 +80,7 @@ cout << "Enter Code: ";
 
 ```
 
-First, the program recieves input from the user. The first check is that the user code is the same length as the secret code becuase if they are not equal the player has no chance at winning. The second check is that the user has entered a code that is within the same range of numbers of as the secret code. If the code has a digit entered that is less that 1 or higher than CODE_SPAN, the program will throw an error and make the user re-enter their input. If these two checks pass, then the code is passed on to be compared to the secret code. 
+First, the program recieves input from the user. The first check is that the user code is the same length as the secret code becuase if they are not equal the player has no chance at winning. The second check is that the user has entered a code that is within the same range of numbers as the secret code. If the code has a digit entered that is less that 1 or higher than CODE_SPAN, the program will throw an error and make the user re-enter their input. If these two checks pass, then the code is passed on to be compared to the secret code. 
 
 Here is the core logic for the generate_code() function:
 
@@ -114,13 +114,13 @@ Here is the core logic for the generate_code() function:
 
 ```
 
-This function creates the string that stores the secret code to be used throughout the rest of the program. It uses a random integer generator and then performs char addition to select which digits will be included in the code. At the end of each loop, the char is added to the string. After the for loop is finished, the code is returned by the function and is ready for use.
+This function creates the string that stores the secret code to be used throughout the rest of the program. It uses a random integer generator and then performs character addition to select which digits will be included in the code. At the end of each loop, the character is added to the string. After the for loop is finished, the code is returned by the function and is ready for use.
 
 The void print_instructions(), int randint(int), and  int randint(int, int) functions are very easy to explain.
 
-The print_instructions() function simply prints out everything about the game to teh console once the program is started.
-The randint(int) function takes in a value and generates a number from 0 to the number entered by the user or by a constant in the program.
-The randint(int,int) function performs the same task as the other randint function, with the exception of it accepts a minimum and a maximum value and generates a number between the two.
+* The print_instructions() function simply prints out everything about the game to the console once the program is started.
+* The randint(int) function takes in a value and generates a number from 0 to the number entered by the user or by a constant in the program.
+* The randint(int,int) function performs the same task as the other randint function, with the exception of it accepts a minimum and a maximum value and generates a number between the two.
 
 ## Main Function and Program Logic
 
@@ -184,7 +184,7 @@ Here is the code that performs the bulk of the logic for the game:
 
 ```
 
-In the first part of this while loop, the correct and misplaced digit counters are reset, and a new copy of the player's code and the secret code is retrieved to be compared. The program then checks for correct digits witha for loop, and uses the for loop counter to index the strings to see if they are equal. If they are, the player's digit that is correct is changed to an "X" and the secret code's digit to a "Y". This is done so that the digits will not be counted more than once and make the correct and misplaced counters read incorrectly. The next check that is performed is for misplaced digits. It implements a nested for loop to check each value of the player's code with every value of the secret code. If any of these match, the player code's and secret code's digit is changed to "X" and "Y" respectively. This continues until the user reaches the max number of guesses or guesses the code correctly. If the user does not guess the code correctly, the program tells the user what the code was and then prompts them to start a new game. If the user guesses the code correctly, the program tells the user this and the number of guesses it took them to guess the code. The user is also prompted to start a new game at this point. If the user chooses to start a new game, then the entire process starts over. If they choose not to, the program print a farewell message and then closes. 
+In the first part of this while loop, the correct and misplaced digit counters are reset, and a new copy of the player's code and the secret code is retrieved to be compared. The program then checks for correct digits with a for loop, and uses the for loop counter to index the strings to see if they are equal. If they are, the player's digit that is correct is changed to an "X" and the secret code's digit to a "Y". This is done so that the digits will not be counted more than once and make the correct and misplaced counters read incorrectly. The next check that is performed is for misplaced digits. It implements a nested for loop to check each value of the player's code with every value of the secret code. If any of these match, the player code's and secret code's digit is changed to "X" and "Y" respectively. This continues until the user reaches the max number of guesses or guesses the code correctly. If the user does not guess the code correctly, the program tells the user what the code was and then prompts them to start a new game. If the user guesses the code correctly, the program tells the user this and the number of guesses it took them to guess the code. The user is also prompted to start a new game at this point. If the user chooses to start a new game, then the entire process starts over. If they choose not to, the program print a farewell message and then close. 
 
 ## Using CodeBreaker
 
